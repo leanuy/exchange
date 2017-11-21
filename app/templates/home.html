@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Welcome to the Flask app<h2>
+    <h3>This is the home page for the Flask app<h3>
+  </div>
+  <div class="table-responsive">
+  	<table data-toggle="table" class="table">
+  		<thead>
+  			<tr>
+  				<th>Cambio</th>
+  				<th data-sortable="true">Compra</th>
+  				<th data-sortable="true">Venta</th>
+  			</tr>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  				<td>Banco Republica</td>
+  				<td>29.8</td>
+  				<td>30</td>
+  			</tr>
+  			<tr>
+  				<td>Nelson</td>
+  				<td>23543</td>
+  				<td>345</td>
+  			</tr>
+  			<tr>
+  				<td>hlis</td>
+  				<td>4354</td>
+  				<td>45345</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  </div>
+{% endblock %}
