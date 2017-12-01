@@ -15,21 +15,13 @@
   			</tr>
   		</thead>
   		<tbody>
-  			<tr>
-  				<td>Banco Republica</td>
-  				<td>29.8</td>
-  				<td>30</td>
+  			{% for nom, compra, venta in cambios %}
+        <tr>
+  				<td>{{ nom }}</td>
+  				<td>{{ compra }}</td>
+  				<td>{{ venta }}</td>
   			</tr>
-  			<tr>
-  				<td>Nelson</td>
-  				<td>23543</td>
-  				<td>345</td>
-  			</tr>
-  			<tr>
-  				<td>hlis</td>
-  				<td>4354</td>
-  				<td>45345</td>
-  			</tr>
+        {% endfor %}
   		</tbody>
   	</table>
   </div>
