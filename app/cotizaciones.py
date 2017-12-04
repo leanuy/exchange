@@ -31,6 +31,20 @@ def dolarSir():
     return cot_dolar_sir
 
 
+def dolarMatriz():
+    url = 'http://www.cambiomatriz.com.uy/'
+    page = urllib2.urlopen(url)
+    raw = BeautifulSoup(page, 'html.parser')
+    cot = raw.find('div', attrs={'class': 'cont cotizaciones'})
+    cot = cot.findAll('td')
+    compra = cot[2].text.strip()
+    venta = cot[4].text.strip()
+    nombre = 'Cambio Matriz'
+    url_cambio = url
+    cot_dolar_sir = (url_cambio, nombre, compra, venta)
+    return cot_dolar_sir
+
+
 # datos = dolarBrou()
 # print "Cotizacion del Dolar en el BROU"
 # print "Compra: " + str(datos['dolar_brou'][compra])
