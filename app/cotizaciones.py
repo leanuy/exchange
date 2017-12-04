@@ -12,9 +12,10 @@ def dolarBrou():
     cot = raw.find('tbody').findAll('p', attrs={'class': 'valor'})
     compra = cot[0].text.strip()
     venta = cot[1].text.strip()
-    cot_dolar_brou = [compra, venta]
-    data = {"dolar_brou": cot_dolar_brou}
-    return data
+    nombre = 'BROU'
+    url_cambio = url
+    cot_dolar_brou = (url_cambio, nombre, compra, venta)
+    return cot_dolar_brou
 
 
 def dolarSir():
@@ -24,17 +25,18 @@ def dolarSir():
     cot = raw.find('tbody').findAll('td', attrs={'class': 'cotizacion'})
     compra = cot[0].text.strip()
     venta = cot[1].text.strip()
-    cot_dolar_sir = [compra, venta]
-    data = {"dolar_sir": cot_dolar_sir}
-    return data
+    nombre = 'Cambio Sir'
+    url_cambio = url
+    cot_dolar_sir = (url_cambio, nombre, compra, venta)
+    return cot_dolar_sir
 
 
-datos = dolarBrou()
-print "Cotizacion del Dolar en el BROU"
-print "Compra: " + str(datos['dolar_brou'][compra])
-print "venta : " + str(datos['dolar_brou'][venta])
+# datos = dolarBrou()
+# print "Cotizacion del Dolar en el BROU"
+# print "Compra: " + str(datos['dolar_brou'][compra])
+# print "venta : " + str(datos['dolar_brou'][venta])
 
-datos = dolarSir()
-print "Cotizacion del Dolar en el cambio Nixis"
-print "Compra: " + str(datos['dolar_sir'][compra])
-print "venta : " + str(datos['dolar_sir'][venta])
+# datos = dolarSir()
+# print "Cotizacion del Dolar en el cambio Nixis"
+# print "Compra: " + str(datos['dolar_sir'][compra])
+# print "venta : " + str(datos['dolar_sir'][venta])
