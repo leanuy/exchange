@@ -43,14 +43,3 @@ def dolarMatriz():
     url_cambio = url
     cot_dolar_sir = (url_cambio, nombre, compra, venta)
     return cot_dolar_sir
-
-
-# datos = dolarBrou()
-# print "Cotizacion del Dolar en el BROU"
-# print "Compra: " + str(datos['dolar_brou'][compra])
-# print "venta : " + str(datos['dolar_brou'][venta])
-
-# datos = dolarSir()
-# print "Cotizacion del Dolar en el cambio Nixis"
-# print "Compra: " + str(datos['dolar_sir'][compra])
-# print "venta : " + str(datos['dolar_sir'][venta])
