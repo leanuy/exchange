@@ -11,6 +11,10 @@ def home():
     cambios.append(cotizaciones.dolarBrou())
     cambios.append(cotizaciones.dolarSir())
     cambios.append(cotizaciones.dolarMatriz())
+    cambios.append(cotizaciones.dolarCambio18())
+    cambios.append(cotizaciones.dolarVarlix())
+    cambios.append(cotizaciones.dolarGales())
+    cambios.append(cotizaciones.dolarFavorita())
     fechahoy = time.strftime("%H:%M:%S %d/%m/%Y")
     return render_template('home.html', cambios=cambios, fechahoy=fechahoy)
 
